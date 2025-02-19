@@ -1,3 +1,4 @@
+
 export default function Page() {
   return (
     <div style={{ 
@@ -5,12 +6,14 @@ export default function Page() {
       height: '100vh', 
       display: 'flex', 
       justifyContent: 'center', 
-      alignItems: 'center' 
+      alignItems: 'center', 
+      overflow: 'hidden'
     }}>
-      <img src="/background.png" alt="background" style={{ 
+      <img src="/background.gif" alt="background" style={{ 
           maxWidth: '100%', 
-          maxHeight: '90%', 
-          objectFit: 'contain' 
+          maxHeight: '100%', 
+          objectFit: 'contain', 
+          margin: '20px 0px !important'
         }} />
     </div>
   )
