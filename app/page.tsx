@@ -7,11 +7,13 @@ export default function Page() {
       display: 'flex', 
       justifyContent: 'center', 
       alignItems: 'center', 
-      margin: 'auto'
+      margin: 'auto',
+      width: '100%',
+      overflow: 'hidden'
     }}>
       <img src="/background.gif" alt="background" style={{ 
-          maxWidth: '70%', 
-          maxHeight: '70%', 
+          maxWidth: '80%', 
+          maxHeight: '80%', 
           objectFit: 'cover', 
           margin: '0px'
         }} />
