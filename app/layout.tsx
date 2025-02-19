@@ -5,7 +5,15 @@ export default function RootLayout({
   }) {
     return (
       <html lang="en">
-        <body>{children}</body>
+
+      <head>
+        <meta property="og:title" content="Bernardita & Mateo" />
+        <meta property="og:description" content="Bernardita & Mateo" />
+        <meta property="og:image" content="background.png" />
+      </head>
+
+      <body>{children}</body>
+
       </html>
     )
   }
