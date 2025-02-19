@@ -12,8 +12,8 @@ export default function Page() {
       <img src="/background.gif" alt="background" style={{ 
           maxWidth: '100%', 
           maxHeight: '100%', 
-          objectFit: 'contain', 
-          margin: '20px 0px !important'
+          objectFit: 'cover', 
+          margin: '0px'
         }} />
     </div>
   )
