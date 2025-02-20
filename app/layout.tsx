@@ -7,7 +7,7 @@ export default function RootLayout({
       <html lang="en">
 
       <head>
-        <meta property="og:title" content="Bernardita & Mateo" />
+        <meta property="og:title" content="Mateo y Bernardita" />
         <meta property="og:description" content="Falta poquito..." />
         <meta property="og:image" content="https://www.mateoybernardita.com.ar/whatsapp.jpg" />
         <meta property="og:type" content="website" />

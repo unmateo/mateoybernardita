@@ -9,7 +9,7 @@ export default function Page() {
       alignItems: 'center', 
       margin: 'auto',
       width: '100%',
-      overflow: 'hidden'
+      overflow: 'hidden',
     }}>
       <img src="/background.gif" alt="background" style={{ 
           maxWidth: '80%', 
