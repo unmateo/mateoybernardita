@@ -1,22 +1,36 @@
 
+
 export default function Page() {
   return (
     <div style={{ 
-      backgroundColor: "#fffef8", 
-      height: '100vh',
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      margin: 'auto',
-      width: '100%',
-      overflow: 'hidden',
+      backgroundColor: "#faf6eb",
+      height: "100vh",
+      width: "100vw",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center", 
+      justifyContent: "center",
+      overflow: "hidden",
+      margin: 0,
+      padding: 0,
+      position: "fixed",
+      top: 0,
+      left: 0
     }}>
-      <img src="/background.gif" alt="background" style={{ 
-          maxWidth: '80%', 
-          maxHeight: '80%', 
-          objectFit: 'cover', 
-          margin: '0px'
-        }} />
+      <p style={{ fontSize: "3rem", fontWeight: 200, margin: "0.5rem"}}>Mateo y Bernardita</p>
+      <img 
+        src="/dancers.gif"
+        alt="background"
+        style={{
+          margin: "0.5rem",
+          maxWidth: "100%",
+          maxHeight: "100%",
+          objectFit: "contain"
+        }}
+      />
+      <p style={{ fontSize: "3rem", fontWeight: 300, margin:"0.5rem" }}>20.09.2025</p>
+      <p style={{ fontSize: "1.5rem", fontWeight: 200, margin:"0.5rem" }}>San Isidro, Buenos Aires</p>
+      <p style={{ fontSize: "3rem", fontWeight: 300, margin:"0.5rem" }}>SAVE THE DATE!</p>
     </div>
   )
-  }  
+}
