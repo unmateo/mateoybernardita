@@ -11,7 +11,7 @@ export default function RootLayout({
 
       <head>
         <meta property="og:title" content="Mateo y Bernardita" />
-        <meta property="og:description" content="Save the date" />
+        <meta property="og:description" content="¡Nos casamos!" />
         <meta property="og:image" content="https://www.mateoybernardita.com.ar/whatsapp.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mateoybernardita.com.ar" />
