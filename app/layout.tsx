@@ -1,4 +1,5 @@
 import './global.css';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout({
     children,
@@ -19,7 +20,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200;1,8..60,200&display=swap" rel="stylesheet"/>
       </head>
 
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
 
       </html>
     )
