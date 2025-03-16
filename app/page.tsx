@@ -17,20 +17,20 @@ export default function Page() {
       top: 0,
       left: 0
     }}>
-      <p style={{ fontSize: "2.5rem", fontWeight: 200, margin: "0.5rem"}}>Mateo y Bernardita</p>
+      <p style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 100, margin: "0.5rem"}}>Mateo y</p>
+      <p style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 100, margin: "0.5rem"}}>Bernardita</p>
       <img 
         src="/dancers.gif"
         alt="background"
         style={{
-          margin: "0.5rem",
-          maxWidth: "100%",
-          maxHeight: "100%",
+          margin: "1rem",
+          maxWidth: "80%",
+          maxHeight: "400px",
           objectFit: "contain"
         }}
       />
-      <p style={{ fontSize: "2.5rem", fontWeight: 300, margin:"0.5rem" }}>20.09.2025</p>
-      <p style={{ fontSize: "1.5rem", fontWeight: 200, margin:"0.5rem" }}>San Isidro, Buenos Aires</p>
-      <p style={{ fontSize: "2.5rem", fontWeight: 300, margin:"0.5rem" }}>SAVE THE DATE!</p>
+      <p style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, margin:"0.5rem" }}>20.09.2025</p>
+      <p style={{ fontSize: "clamp(1rem, 2vw, 2rem)", fontWeight: 200, margin:"0.5rem" }}>San Isidro, Buenos Aires</p>
     </div>
   )
 }
