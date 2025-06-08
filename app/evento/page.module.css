@@ -1,0 +1,126 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Darker Grotesque", sans-serif;
+  color: #165054;
+  background-color: #FDFBF7;
+  font-size: 1.2rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+}
+
+.title {
+  font-family: "Homemade Apple", cursive;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: #165054;
+  line-height: 1.5;
+}
+
+.subtitle {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 200;
+  color: #165054;
+  letter-spacing: 0.15em;
+}
+
+.section {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.sectionTitle {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #165054;
+}
+
+.locationCard {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: #165054;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Darker Grotesque", sans-serif;
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: #0D3235;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.infoText {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+  color: #165054;
+  font-weight: 400;
+}
+
+.bankInfo {
+  text-align: left;
+  background-color: #F5F2EB;
+  padding: 1.5rem;
+  border-radius: 0;
+  margin: 1rem 0;
+  border: 1px solid #E5DED2;
+  color: #165054;
+  font-size: 1.2rem;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #165054;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .infoText {
+    font-size: 1.2rem;
+  }
+} 
