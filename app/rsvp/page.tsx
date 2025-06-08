@@ -10,7 +10,8 @@ const Confetti = dynamic(() => import('react-confetti'), {
 export default function RSVPPage() {
   const [formData, setFormData] = useState({
     nombre: '',
-    confirmacion: ''
+    confirmacion: '',
+    nombreInvitado: ''
   })
   const [showConfetti, setShowConfetti] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -107,15 +108,12 @@ export default function RSVPPage() {
           width: "90%",
           maxWidth: "400px",
           padding: "2rem",
-          backgroundColor: "white",
-          borderRadius: "8px",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
         }}
       >
         <input 
           required
           name="nombre" 
-          placeholder="Nombres" 
+          placeholder="Nombre y Apellido" 
           value={formData.nombre}
           onChange={handleInputChange}
           disabled={isSubmitted}
@@ -197,23 +195,30 @@ export default function RSVPPage() {
           </div>
         </div>
 
-        <textarea 
-          name="comments" 
-          placeholder="Mensaje para los novios"
+        <label style={{
+            fontSize: "1rem",
+            color: "#4a4a4a",
+            fontFamily: "'Courier Prime', monospace"
+          }}>
+            Si fuiste invitado con acompañante, indica su nombre y apellido
+          </label>
+        <input 
+          required
+          name="nombreInvitado" 
+          placeholder="Nombre y Apellido del acompañante" 
+          value={formData.nombreInvitado}
+          onChange={handleInputChange}
           disabled={isSubmitted}
           style={{
             padding: "0.8rem",
             fontSize: "1rem",
             border: "1px solid #ddd",
             borderRadius: "4px",
-            minHeight: "100px",
-            resize: "vertical",
             fontFamily: "'Courier Prime', monospace",
             opacity: isSubmitted ? 0.7 : 1,
             cursor: isSubmitted ? 'not-allowed' : 'text'
           }}
         />
-
         <button 
           type="submit"
           disabled={!isFormValid || isSubmitting || isSubmitted}
