@@ -1,0 +1,25 @@
+.flower {
+  width: 2rem;
+  height: 2rem;
+  color: #165054;
+  transition: transform 0.3s ease;
+}
+
+.flower:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive sizes */
+@media (min-width: 640px) {
+  .flower {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flower {
+    width: 3rem;
+    height: 3rem;
+  }
+} 

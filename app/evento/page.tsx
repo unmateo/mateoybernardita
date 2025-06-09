@@ -1,3 +1,4 @@
+import Flower from './components/flower';
 import styles from './page.module.css';
 import Link from 'next/link';
 
@@ -45,6 +46,8 @@ export default function EventoPage() {
         </div>
       </section>
 
+      <Flower/>
+
       <section className={styles.section}>
         <h3 className={styles.sectionTitle}>¡Queremos compartir este día con vos!</h3>
         <p className={styles.infoText}>
@@ -68,12 +71,6 @@ export default function EventoPage() {
           Mateo Rodríguez<br />
           12345678<br />
           Caja de Ahorro $</p>
-        </div>
-        <div className={styles.bankInfo}>
-          <p>Santander<br />
-          Bernardita Suárez<br />
-          12345678<br />
-          Caja de Ahorro U$S</p>
         </div>
       </section>
 
