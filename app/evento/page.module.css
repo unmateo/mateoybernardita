@@ -32,8 +32,8 @@
 }
 
 .section {
-  margin-bottom: 4rem;
-  padding: 2rem 0;
+  /* margin-bottom: 4rem; */
+  /* padding: 2rem 0; */
 }
 
 .sectionTitle {
@@ -46,14 +46,14 @@
 
 .locationCard {
   padding: 2rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   background-color: transparent;
 }
 
 .button {
   background-color: #165054;
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.8rem;;
   border: none;
   border-radius: 6px;
   font-size: 1.1rem;

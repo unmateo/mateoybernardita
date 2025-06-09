@@ -13,7 +13,7 @@ export default function EventoPage() {
       <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.locationCard}>
-            <h3 className={styles.sectionTitle}>Cuándo</h3>
+            {/* <h3 className={styles.sectionTitle}>Cuándo</h3> */}
             <p className={styles.infoText}>
               20 de Septiembre<br />
               11:00 hs<br />
@@ -29,7 +29,7 @@ export default function EventoPage() {
           </div>
 
           <div className={styles.locationCard}>
-            <h3 className={styles.sectionTitle}>Dónde</h3>
+            {/* <h3 className={styles.sectionTitle}>Dónde</h3> */}
             <p className={styles.infoText}>
               Deriva<br />
               Dardo Rocha 2290, Martinez
