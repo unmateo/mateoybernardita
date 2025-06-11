@@ -6,11 +6,12 @@
   font-family: "Darker Grotesque", sans-serif;
   color: #165054;
   background-color: #FDFBF7;
+  font-weight: 400;
   font-size: 1.2rem;
 }
 
 .header {
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
 }
 
 .title {
@@ -32,6 +33,7 @@
 }
 
 .section {
+  /* margin-top: 12rem;; */
   /* margin-bottom: 4rem; */
   /* padding: 2rem 0; */
 }
@@ -132,7 +134,8 @@
   }
   
   .sectionTitle {
-    font-size: 2rem;
+    /* font-size: 1.8rem; */
+    /* font-size: 2rem; */
   }
 
   .infoText {
