@@ -1,4 +1,6 @@
+import Bottle from './components/bottle';
 import Flower from './components/flower';
+import Ribbon from './components/ribbon';
 import Waves from './components/waves';
 import styles from './page.module.css';
 import Link from 'next/link';
@@ -29,7 +31,12 @@ export default function EventoPage() {
         <h3 className={styles.sectionTitle}>Dress Code</h3>
         <p className={styles.infoText}>Elegante pero chill</p>
       </section> */}
-      <p>Dress Code: Elegante pero chill</p>
+      <div>
+      <Ribbon/>
+      <Flower/>
+      <Bottle/>
+      <p><i>Dress Code:</i> Elegante pero chill</p>
+      </div>
       <p>Si querés hacernos un regalo podés colaborar con nuestra luna de miel:<br/> </p>
       <Link href="/rsvp" className={styles.buttonInverted}>
           Ver datos bancarios
