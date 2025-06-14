@@ -19,7 +19,7 @@ export default function EventoPage() {
             </p>
       <br/>
         <Link href="/rsvp" className={styles.buttonInverted}>
-          Confirmá tu asistencia
+          Confirmar asistencia
         </Link>
       {/* <Waves/> */}
       <section className={styles.section}>
@@ -34,10 +34,10 @@ export default function EventoPage() {
       <div>
       <Ribbon/>
       <Flower/>
-      <Bottle/>
-      <p><i>Dress Code:</i> Elegante pero chill</p>
+      <p>Dress Code: <i>Elegante pero chill</i></p>
       </div>
-      <p>Si querés hacernos un regalo podés colaborar con nuestra luna de miel:<br/> </p>
+      <Bottle/>
+      <p>Si querés hacernos un regalo:<br/> </p>
       <Link href="/rsvp" className={styles.buttonInverted}>
           Ver datos bancarios
         </Link>
@@ -68,7 +68,7 @@ export default function EventoPage() {
 
 
       <footer className={styles.section}>
-      <h2 className={styles.subtitle}>¡Te esperamos!</h2>
+      <h2 className={styles.subtitle} style={{marginBottom: '1rem'}}>¡Te esperamos!</h2>
       </footer>
     </div>
   );
