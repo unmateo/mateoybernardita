@@ -21,52 +21,15 @@ export default function EventoPage() {
         <Link href="/rsvp" className={styles.buttonInverted}>
           Confirmar asistencia
         </Link>
-      {/* <Waves/> */}
       <section className={styles.section}>
-        {/* <p className={styles.sectionTitle}>¿Vas a venir?</p> */}
       </section>
-      {/* <Waves/> */}
-
-      {/* <section className={styles.section}>
-        <h3 className={styles.sectionTitle}>Dress Code</h3>
-        <p className={styles.infoText}>Elegante pero chill</p>
-      </section> */}
-      <div>
       <Ribbon/>
-      <Flower/>
-      <p>Dress Code: <i>Elegante pero chill</i></p>
-      </div>
+      <p style={{marginTop:0}}>Dress Code: <i>Elegante pero chill</i></p>
       <Bottle/>
-      <p>Si querés hacernos un regalo:<br/> </p>
+      <p style={{marginTop:0}}>Si querés hacernos un regalo:<br/> </p>
       <Link href="/rsvp" className={styles.buttonInverted}>
           Ver datos bancarios
         </Link>
-      {/* <Waves/> */}
-
-      {/* <section className={styles.section}>
-        <h3 className={styles.sectionTitle}>¿Cómo llego?</h3>
-        <a 
-              href="https://maps.app.goo.gl/AMEU1myUznB2GhvW7" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className={styles.buttonInverted}
-            >
-              ¿Cómo llegar?
-            </a>
-      </section>
-
-      <Flower/> */}
-{/* <br/> */}
-            {/* <a 
-              href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MjdxNWwyYXVtM2sxZWo2cmJuM2ltMG9hcXIgMWFhMzVmZmNkMDlkMzM2YmE1ZDEyOGQ1MTk0MGJjYzY2MjY1ZmNjNTI5ZWM1NzhlMGI5ZjQ5MTBjZGM0OWYwMEBn&tmsrc=1aa35ffcd09d336ba5d128d51940bcc66265fcc529ec578e0b9f4910cdc49f00%40group.calendar.google.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className={styles.buttonInverted}
-            >
-              Agendá el evento
-            </a> */}
-
-
       <footer className={styles.section}>
       <h2 className={styles.subtitle} style={{marginBottom: '1rem'}}>¡Te esperamos!</h2>
       </footer>
