@@ -17,21 +17,22 @@ export default function EventoPage() {
               20 de Septiembre · 11:00 hs<br />
             Dardo Rocha 2290, Martinez
             </p>
-      <br/>
         <Link href="/rsvp" className={styles.buttonInverted}>
           Confirmar asistencia
         </Link>
-      <section className={styles.section}>
-      </section>
-      <Ribbon/>
+      <div style={{marginTop: '1rem'}}>
+        <Ribbon/>
       <p style={{marginTop:0}}>Dress Code: <i>Elegante pero chill</i></p>
+      </div>
       <Bottle/>
-      <p style={{marginTop:0}}>Si querés hacernos un regalo:<br/> </p>
+      <p style={{marginTop:0}}>Si querés hacernos un regalo,<br/>
+      podés colaborar con nuestra luna de miel:<br/>
+       </p>
       <Link href="/rsvp" className={styles.buttonInverted}>
           Ver datos bancarios
         </Link>
-      <footer className={styles.section}>
-      <h2 className={styles.subtitle} style={{marginBottom: '1rem'}}>¡Te esperamos!</h2>
+      <footer style={{margin: '2rem'}}>
+      <h2 className={styles.subtitle} >¡Te esperamos!</h2>
       </footer>
     </div>
   );
