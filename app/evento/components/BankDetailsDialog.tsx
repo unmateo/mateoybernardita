@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import styles from './BankDetailsDialog.module.css';
+import CopyIcon from './CopyIcon';
+import CheckIcon from './CheckIcon';
 
 interface BankDetailsDialogProps {
   isOpen: boolean;
@@ -9,6 +11,18 @@ interface BankDetailsDialogProps {
 }
 
 export default function BankDetailsDialog({ isOpen, onClose }: BankDetailsDialogProps) {
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const handleCopy = async (text: string, id: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(id);
+      setTimeout(() => setCopied(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -19,12 +33,28 @@ export default function BankDetailsDialog({ isOpen, onClose }: BankDetailsDialog
         <div className={styles.content}>
           <p>Banco: Santander</p>
           <p>Titular: Bernardita De Luca</p>
-          <p>CBU: 0720038088000015218490</p>
+          <div className={styles.copyContainer}>
+            <p>CBU: 0720038088000015218490</p>
+            <button 
+              className={`${styles.copyButton} ${copied === 'bernardita' ? styles.copied : ''}`}
+              onClick={() => handleCopy('0720038088000015218490', 'bernardita')}
+            >
+              {copied === 'bernardita' ? <CheckIcon className={styles.copyIcon} /> : <CopyIcon className={styles.copyIcon} />}
+            </button>
+          </div>
         </div>
         <div className={styles.content}>
           <p>Banco: Santander</p>
           <p>Titular: Mateo Harfuch Tosi Loza</p>
-          <p>CBU: 0720038088000015218490</p>
+          <div className={styles.copyContainer}>
+            <p>CBU: 0720038088000015218490</p>
+            <button 
+              className={`${styles.copyButton} ${copied === 'mateo' ? styles.copied : ''}`}
+              onClick={() => handleCopy('0720038088000015218490', 'mateo')}
+            >
+              {copied === 'mateo' ? <CheckIcon className={styles.copyIcon} /> : <CopyIcon className={styles.copyIcon} />}
+            </button>
+          </div>
         </div>
       </div>
     </div>

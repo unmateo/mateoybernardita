@@ -42,7 +42,42 @@
 .content p {
   margin: 0.5rem 0;
   font-size: 1.1rem;
-} 
+}
+
+.copyContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copyButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  color: #666;
+}
+
+.copyButton:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.copied {
+  color: #4CAF50;
+  background-color: #e8f5e9;
+}
+
+.copyIcon {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+}
 
 .title {
     font-family: "Homemade Apple", cursive;
