@@ -3,12 +3,13 @@
 import Bottle from './components/bottle';
 import Ribbon from './components/ribbon';
 import BankDetailsDialog from './components/BankDetailsDialog';
+import RSVPDialog from './components/RSVPDialog';
 import styles from './page.module.css';
-import Link from 'next/link';
 import { useState } from 'react';
 
 export default function EventoPage() {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isBankDialogOpen, setIsBankDialogOpen] = useState(false);
+  const [isRSVPDialogOpen, setIsRSVPDialogOpen] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -21,9 +22,9 @@ export default function EventoPage() {
               20 de Septiembre · 11:00 hs<br />
             Dardo Rocha 2290, Martinez
             </p>
-        <Link href="/rsvp" className={styles.buttonInverted}>
+        <button onClick={() => setIsRSVPDialogOpen(true)} className={styles.buttonInverted}>
           Confirmar asistencia
-        </Link>
+        </button>
       <div style={{marginTop: '1rem'}}>
         <Ribbon/>
       <p style={{marginTop:0}}>Dress Code: <i>Elegante pero chill</i></p>
@@ -32,12 +33,16 @@ export default function EventoPage() {
       <p style={{marginTop:0}}>Si querés hacernos un regalo,<br/>
       podés colaborar con nuestra luna de miel:<br/>
        </p>
-      <button onClick={() => setIsDialogOpen(true)} className={styles.buttonInverted}>
+      <button onClick={() => setIsBankDialogOpen(true)} className={styles.buttonInverted}>
           Ver datos bancarios
       </button>
       <BankDetailsDialog 
-        isOpen={isDialogOpen}
-        onClose={() => setIsDialogOpen(false)}
+        isOpen={isBankDialogOpen}
+        onClose={() => setIsBankDialogOpen(false)}
+      />
+      <RSVPDialog
+        isOpen={isRSVPDialogOpen}
+        onClose={() => setIsRSVPDialogOpen(false)}
       />
       <footer style={{margin: '2rem'}}>
       <h2 className={styles.subtitle} >¡Te esperamos!</h2>
