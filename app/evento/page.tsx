@@ -1,11 +1,15 @@
+"use client";
+
 import Bottle from './components/bottle';
-import Flower from './components/flower';
 import Ribbon from './components/ribbon';
-import Waves from './components/waves';
+import BankDetailsDialog from './components/BankDetailsDialog';
 import styles from './page.module.css';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function EventoPage() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -28,9 +32,13 @@ export default function EventoPage() {
       <p style={{marginTop:0}}>Si querés hacernos un regalo,<br/>
       podés colaborar con nuestra luna de miel:<br/>
        </p>
-      <Link href="/rsvp" className={styles.buttonInverted}>
+      <button onClick={() => setIsDialogOpen(true)} className={styles.buttonInverted}>
           Ver datos bancarios
-        </Link>
+      </button>
+      <BankDetailsDialog 
+        isOpen={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+      />
       <footer style={{margin: '2rem'}}>
       <h2 className={styles.subtitle} >¡Te esperamos!</h2>
       </footer>
