@@ -11,9 +11,8 @@ interface RSVPDialogProps {
 export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    companion: '',
     attending: 'yes',
-    guests: '0',
     message: ''
   });
 
@@ -30,10 +29,10 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.dialog} onClick={e => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>×</button>
-        <h2 className={styles.title}>Confirmar Asistencia</h2>
+        <h2 className={styles.title}>Confirmar asistencia</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.formGroup}>
-            <label htmlFor="name">Nombre completo *</label>
+            <label htmlFor="name">Nombre y apellido</label>
             <input
               type="text"
               id="name"
@@ -44,18 +43,17 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="email">Email *</label>
+            <label htmlFor="companion">Si fuiste invitado con un acompañante, <br/>indicanos su nombre y apellido</label>
             <input
-              type="email"
-              id="email"
-              required
-              value={formData.email}
-              onChange={e => setFormData({...formData, email: e.target.value})}
+              type="text"
+              id="companion"
+              value={formData.companion}
+              onChange={e => setFormData({...formData, companion: e.target.value})}
             />
           </div>
 
           <div className={styles.formGroup}>
-            <label>¿Vas a asistir? *</label>
+            <label>¿Vas a asistir?</label>
             <div className={styles.radioGroup}>
               <label>
                 <input
@@ -80,25 +78,8 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
             </div>
           </div>
 
-          {formData.attending === 'yes' && (
-            <div className={styles.formGroup}>
-              <label htmlFor="guests">¿Cuántos acompañantes? *</label>
-              <select
-                id="guests"
-                required
-                value={formData.guests}
-                onChange={e => setFormData({...formData, guests: e.target.value})}
-              >
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-          )}
-
           <div className={styles.formGroup}>
-            <label htmlFor="message">Mensaje (opcional)</label>
+            <label htmlFor="message">Mensaje para los novios</label>
             <textarea
               id="message"
               value={formData.message}
