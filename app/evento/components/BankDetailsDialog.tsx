@@ -31,8 +31,8 @@ export default function BankDetailsDialog({ isOpen, onClose }: BankDetailsDialog
         <button className={styles.closeButton} onClick={onClose}>×</button>
         <h2 className={styles.title}>Datos Bancarios</h2>
         <div className={styles.content}>
-          <p>Banco: Santander</p>
-          <p>Titular: Bernardita De Luca</p>
+          <p><b>Banco Santander, Argentina</b></p>
+          <p>Bernardita De Luca</p>
           <div className={styles.copyContainer}>
             <p>CBU: 0720038088000015218490</p>
             <button 
@@ -44,15 +44,24 @@ export default function BankDetailsDialog({ isOpen, onClose }: BankDetailsDialog
           </div>
         </div>
         <div className={styles.content}>
-          <p>Banco: Santander</p>
-          <p>Titular: Mateo Harfuch Tosi Loza</p>
+          <p><b>Community Federal Savings Bank, USA</b></p>
+          <p>Mateo Harfuch Tosi Loza</p>
           <div className={styles.copyContainer}>
-            <p>CBU: 0720038088000015218490</p>
+            <p>Account Number: 8311639515</p>
             <button 
-              className={`${styles.copyButton} ${copied === 'mateo' ? styles.copied : ''}`}
-              onClick={() => handleCopy('0720038088000015218490', 'mateo')}
+              className={`${styles.copyButton} ${copied === 'mateoNumber' ? styles.copied : ''}`}
+              onClick={() => handleCopy('8311639515', 'mateoNumber')}
             >
-              {copied === 'mateo' ? <CheckIcon className={styles.copyIcon} /> : <CopyIcon className={styles.copyIcon} />}
+              {copied === 'mateoNumber' ? <CheckIcon className={styles.copyIcon} /> : <CopyIcon className={styles.copyIcon} />}
+            </button>
+          </div>
+          <div className={styles.copyContainer}>
+            <p>ACH Routing Number: 026073150</p>
+            <button 
+              className={`${styles.copyButton} ${copied === 'mateoRouting' ? styles.copied : ''}`}
+              onClick={() => handleCopy('026073150', 'mateoRouting')}
+            >
+              {copied === 'mateoRouting' ? <CheckIcon className={styles.copyIcon} /> : <CopyIcon className={styles.copyIcon} />}
             </button>
           </div>
         </div>

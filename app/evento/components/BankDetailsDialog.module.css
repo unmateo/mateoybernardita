@@ -39,15 +39,17 @@
   text-align: left;
 }
 
-.content p {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
+.content p{
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 .copyContainer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  /* font-size: 1rem; */
 }
 
 .copyButton {
@@ -74,8 +76,8 @@
 }
 
 .copyIcon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background: transparent;
 }
 
