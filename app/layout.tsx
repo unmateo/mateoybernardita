@@ -7,7 +7,7 @@ export default function RootLayout({
     children: React.ReactNode
   }) {
     return (
-      <html lang="en">
+      <html lang="en" style={{ backgroundColor: "#FDFBF7" }}>
 
       <head>
         <meta property="og:title" content="Mateo y Bernardita" />

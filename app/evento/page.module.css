@@ -1,3 +1,4 @@
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -128,10 +129,7 @@
     font-size: 1.8rem;
   }
   
-  .sectionTitle {
-    /* font-size: 1.8rem; */
-    /* font-size: 2rem; */
-  }
+
 
   .infoText {
     font-size: 1.2rem;

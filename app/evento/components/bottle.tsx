@@ -1,6 +1,6 @@
 export default function Bottle() {
     return (
-<svg width="20%" height="100%" viewBox="0 0 119 148" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginTop: '2rem'}}>
+<svg width="20%" height="100%" viewBox="0 0 119 148" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginTop: '2rem', maxWidth: "64px"}}>
 <path d="M76.84 45.8C76.84 45.8 76.8 45.74 76.79 45.74L76.84 45.8Z" fill="currentColor"></path>
 <path d="M76.08 39.1C76.08 39.1 76.07 39.1 76.06 39.12L76.08 39.1Z" fill="currentColor"></path>
 <path d="M67.32 50.48C67.32 50.48 67.33 50.48 67.34 50.47L67.32 50.48Z" fill="currentColor"></path>
