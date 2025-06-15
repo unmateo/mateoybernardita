@@ -45,7 +45,8 @@ export default function EventoPage() {
         onClose={() => setIsRSVPDialogOpen(false)}
       />
       <footer style={{margin: '2rem'}}>
-      <h2 className={styles.subtitle} >¡Te esperamos!</h2>
+        <img src="/auto.png" style={{width: '80px'}} />
+      <h2 className={styles.subtitle} style={{marginTop:0}} >¡Te esperamos!</h2>
       </footer>
     </div>
   );
