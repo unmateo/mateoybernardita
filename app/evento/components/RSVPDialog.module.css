@@ -149,4 +149,42 @@
 
 .submitButton:hover {
   background-color: #0D3235;
+}
+
+.submitButton:disabled {
+  background-color: #E5DED2;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.success {
+  color: #059669;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 500;
+  font-family: "Darker Grotesque", sans-serif;
+  padding: 1rem;
+  background-color: #ECFDF5;
+  border-radius: 8px;
+  border: 1px solid #059669;
+}
+
+.formGroup input:disabled,
+.formGroup textarea:disabled,
+.formGroup input[type="radio"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #F9F9F9;
+}
+
+.formGroup input[type="radio"]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
 } 
