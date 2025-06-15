@@ -61,9 +61,7 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
         console.error('Fetch error:', fetchError);
         throw fetchError;
       }
-
       setSuccess(true);
-      onClose();
     } catch (err) {
       console.error('Error:', err);
       setError('Hubo un error al enviar el formulario. Por favor, intentá de nuevo.');
