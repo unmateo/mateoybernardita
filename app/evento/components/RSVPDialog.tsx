@@ -71,7 +71,6 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
   };
 
   if (!isOpen) return null;
-
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.dialog} onClick={e => e.stopPropagation()}>
@@ -82,7 +81,7 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
             <p>¡Gracias por confirmar!</p>
             <p style={{fontSize: '1.4rem'}}>Nos vemos pronto.</p>
             <a 
-              href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MjdxNWwyYXVtM2sxZWo2cmJuM2ltMG9hcXIgMWFhMzVmZmNkMDlkMzM2YmE1ZDEyOGQ1MTk0MGJjYzY2MjY1ZmNjNTI5ZWM1NzhlMGI5ZjQ5MTBjZGM0OWYwMEBn&tmsrc=1aa35ffcd09d336ba5d128d51940bcc66265fcc529ec578e0b9f4910cdc49f00%40group.calendar.google.com"
+              href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Casamiento+Mateo+%26+Bernardita&dates=20250920T110000/20250920T180000&ctz=America/Buenos_Aires&location=Deriva,+Dardo+Rocha+2290+Mart%C3%ADnez,+B1640+FTD,+Provincia+de+Buenos+Aires,+Argentina&details&sprop&sprop=name"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.calendarButton}
