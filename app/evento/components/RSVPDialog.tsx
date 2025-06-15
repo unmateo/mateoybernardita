@@ -63,18 +63,9 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
       }
 
       setSuccess(true);
-      setTimeout(() => {
-        onClose();
-        // Reset form after closing
-        setFormData({
-          name: '',
-          companion: '',
-          attending: 'yes',
-          message: ''
-        });
-        setSuccess(false);
-      }, 2000);
+      onClose();
     } catch (err) {
+      console.error('Error:', err);
       setError('Hubo un error al enviar el formulario. Por favor, intentá de nuevo.');
     } finally {
       setIsSubmitting(false);
@@ -87,13 +78,23 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.dialog} onClick={e => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>×</button>
-        <h2 className={styles.title}>Confirmar asistencia</h2>
         
         {success ? (
           <div className={styles.success}>
-            ¡Gracias por confirmar! Nos vemos pronto.
+            <p>¡Gracias por confirmar!</p>
+            <p style={{fontSize: '1.4rem'}}>Nos vemos pronto.</p>
+            <a 
+              href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MjdxNWwyYXVtM2sxZWo2cmJuM2ltMG9hcXIgMWFhMzVmZmNkMDlkMzM2YmE1ZDEyOGQ1MTk0MGJjYzY2MjY1ZmNjNTI5ZWM1NzhlMGI5ZjQ5MTBjZGM0OWYwMEBn&tmsrc=1aa35ffcd09d336ba5d128d51940bcc66265fcc529ec578e0b9f4910cdc49f00%40group.calendar.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.calendarButton}
+            >
+              Agendar evento
+            </a>
           </div>
         ) : (
+          <>
+        <h2 className={styles.title}>Confirmar asistencia</h2>
           <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.formGroup}>
               <label htmlFor="name">Nombre y apellido</label>
@@ -167,6 +168,7 @@ export default function RSVPDialog({ isOpen, onClose }: RSVPDialogProps) {
               {isSubmitting ? 'Enviando...' : 'Enviar'}
             </button>
           </form>
+          </>
         )}
       </div>
     </div>

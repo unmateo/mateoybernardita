@@ -164,16 +164,45 @@
 }
 
 .success {
-  color: #059669;
-  font-size: 1.1rem;
   text-align: center;
-  margin: 1rem 0;
-  font-weight: 500;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.success p {
   font-family: "Darker Grotesque", sans-serif;
-  padding: 1rem;
-  background-color: #ECFDF5;
+  font-size: 1.8rem;
+  color: #165054;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.calendarButton {
+  display: inline-block;
+  background-color: #165054;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
   border-radius: 8px;
-  border: 1px solid #059669;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.calendarButton:hover {
+  background-color: #0D3235;
+  transform: translateY(-1px);
+}
+
+.calendarButton:active {
+  transform: translateY(0);
 }
 
 .formGroup input:disabled,
