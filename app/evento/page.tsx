@@ -19,7 +19,7 @@ export default function EventoPage() {
       </header>
 
       <p className={styles.infoText}>
-              20 de Septiembre · 11:00 hs<br />
+              20 de Septiembre · 11:30 hs<br />
             Dardo Rocha 2290, Martinez
             </p>
         <button onClick={() => setIsRSVPDialogOpen(true)} className={styles.buttonInverted}>
