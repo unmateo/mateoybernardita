@@ -1,36 +1,53 @@
+"use client";
 
+import Bottle from './evento/components/bottle';
+import Ribbon from './evento/components/ribbon';
+import BankDetailsDialog from './evento/components/BankDetailsDialog';
+import RSVPDialog from './evento/components/RSVPDialog';
+import styles from './evento/page.module.css';
+import { useState } from 'react';
 
 export default function Page() {
+  const [isBankDialogOpen, setIsBankDialogOpen] = useState(false);
+  const [isRSVPDialogOpen, setIsRSVPDialogOpen] = useState(false);
+
   return (
-    <div style={{ 
-      backgroundColor: "#faf6eb",
-      height: "100%",
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center", 
-      justifyContent: "center",
-      overflow: "hidden",
-      margin: 0,
-      padding: 0,
-      position: "fixed",
-      top: 0,
-      left: 0
-    }}>
-      <p style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 100, margin: "0.5rem"}}>Mateo y</p>
-      <p style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 100, margin: "0.5rem"}}>Bernardita</p>
-      <img 
-        src="/dancers.gif"
-        alt="background"
-        style={{
-          margin: "1rem",
-          maxWidth: "80%",
-          maxHeight: "400px",
-          objectFit: "contain"
-        }}
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Mateo & Bernardita</h1>
+        <h2 className={styles.subtitle}>¡NOS CASAMOS!</h2>
+      </header>
+
+      <p className={styles.infoText}>
+              20 de Septiembre · 11:30 hs<br />
+            Dardo Rocha 2290, Martinez
+            </p>
+        <button onClick={() => setIsRSVPDialogOpen(true)} className={styles.buttonInverted}>
+          Confirmar asistencia
+        </button>
+      <div style={{marginTop: '1rem'}}>
+        <Ribbon/>
+      <p style={{marginTop:0}}>Dress Code: <i>Elegante pero chill</i></p>
+      </div>
+      <Bottle/>
+      <p style={{marginTop:0}}>Si querés hacernos un regalo,<br/>
+      podés colaborar con nuestra luna de miel:<br/>
+       </p>
+      <button onClick={() => setIsBankDialogOpen(true)} className={styles.buttonInverted}>
+          Ver datos bancarios
+      </button>
+      <BankDetailsDialog 
+        isOpen={isBankDialogOpen}
+        onClose={() => setIsBankDialogOpen(false)}
       />
-      <p style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, margin:"1rem" }}>20.09.2025</p>
-      <p style={{ fontSize: "clamp(1rem, 2vw, 2rem)", fontWeight: 200, margin:"0.5rem" }}>San Isidro, Buenos Aires</p>
+      <RSVPDialog
+        isOpen={isRSVPDialogOpen}
+        onClose={() => setIsRSVPDialogOpen(false)}
+      />
+      <footer style={{margin: '2rem'}}>
+        <img src="/auto.png" style={{width: '80px'}} />
+      <h2 className={styles.subtitle} style={{marginTop:0}} >¡Te esperamos!</h2>
+      </footer>
     </div>
-  )
+  );
 }
