@@ -20,7 +20,14 @@ export default function Page() {
 
       <p className={styles.infoText}>
               20 de Septiembre · 11:30 hs<br />
-            Dardo Rocha 2290, Martinez
+            <a 
+              href="https://maps.app.goo.gl/ukFK7i1yncSZMHTn9" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: '#165054', textDecoration: 'underline', textDecorationColor: '#165054', textDecorationThickness: 'from-font', textDecorationStyle: 'dotted' }}
+            >
+              Dardo Rocha 2290, Martinez
+            </a>
             </p>
         <button onClick={() => setIsRSVPDialogOpen(true)} className={styles.buttonInverted}>
           Confirmar asistencia
