@@ -24,7 +24,7 @@ export default function Page() {
               href="https://maps.app.goo.gl/ukFK7i1yncSZMHTn9" 
               target="_blank" 
               rel="noopener noreferrer"
-              style={{ color: '#165054', textDecoration: 'underline', textDecorationColor: '#165054', textDecorationThickness: 'from-font', textDecorationStyle: 'dotted' }}
+              style={{ color: '#165054', textDecoration: 'underline', textDecorationColor: '#165054', textDecorationThickness: 'from-font', textDecorationStyle: 'dotted', textUnderlineOffset: '4px' }}
             >
               Dardo Rocha 2290, Martinez
             </a>
