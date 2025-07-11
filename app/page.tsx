@@ -19,7 +19,7 @@ export default function Page() {
       </header>
 
       <p className={styles.infoText}>
-              20 de Septiembre · 11:30 hs<br />
+              20 de Septiembre · 11:15 hs<br />
             <a 
               href="https://maps.app.goo.gl/ukFK7i1yncSZMHTn9" 
               target="_blank" 

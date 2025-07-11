@@ -10,6 +10,7 @@ export default function RootLayout({
       <html lang="en" style={{ backgroundColor: "#FDFBF7" }}>
 
       <head>
+        <title>Mateo y Bernardita</title>
         <meta property="og:title" content="Mateo y Bernardita" />
         <meta property="og:description" content="¡Nos casamos!" />
         <meta property="og:image" content="https://www.mateoybernardita.com.ar/whatsapp.jpg" />
